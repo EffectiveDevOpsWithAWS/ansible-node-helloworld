@@ -11,7 +11,7 @@
 - name: Copy upstart file
   become: yes
   copy:
-    src: helloworld.upstart
+    src: helloworld.conf
     dest: /etc/init/helloworld.conf
     owner: root
     group: root
