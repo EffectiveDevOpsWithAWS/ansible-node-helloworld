@@ -9,6 +9,7 @@
     mode: 0644
 
 - name: Copy upstart file
+  become: yes
   copy:
     src: helloworld.upstart
     dest: /etc/init/helloworld.conf
@@ -17,6 +18,7 @@
     mode: 0644
 
 - name: Start Hello World node service
+  become: yes
   service:
     name: helloworld
     state: started
